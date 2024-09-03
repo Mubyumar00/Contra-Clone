@@ -1,0 +1,1054 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant+SC:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Maven+Pro:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+:root {
+  --main-bg-white: #ffffff;
+  --background-two: #d1d1d1;
+  --framer-bg: #2f41ff;
+  --card-bg: #3d3d3d;
+  --font-color: #3d3d3d;
+
+  /* button */
+
+  --nav-btn-color: #4f4f4f;
+  --nav-btn-bg: #6d6d6d;
+
+  /* primary btn */
+
+  --primary-btn-font-size: 18px;
+  --primary-btn-font-weight: 500;
+  --primary-btn-border-radius: 30px;
+  --primary-btn-padding: 10px;
+  --primary-btn-one: #b0b0b0;
+  --primary-btn-one-border: #b0b0b0;
+  --primary-btn-two: #3d3d3d;
+  --primary-btn-two-border: #3d3d3d;
+
+  /* search */
+
+  --search-bar-btn-bg: #9462ff;
+  --search-bar-btn-border-radius: 50px;
+  --search-bar-btn-border: 1px solid #faff07;
+  --search-bar-btn-text-color: #efefef;
+  --search-bar-text-size: 20px;
+  --search-bar-icon: #374957;
+
+  /* figma btn */
+
+  --padding-figma: 35px 50px;
+  --padding-figma-small: 15px 25px;
+  --border-radius-figma: 10px;
+  --arrow-right-color: #374957;
+
+  /* general style */
+
+  --general-para-size: 20px;
+}
+
+body {
+  background-color: var(--main-bg-white);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-bg-white);
+  height: 128px;
+  gap: 23px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 31px 20px 31px 20px;
+  z-index: 1;
+  box-shadow: 0px 1.2rem 3.2rem rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: #3d3d3d;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo img {
+  width: 170px;
+  height: 50px;
+}
+
+.logo h2 {
+  font-size: 36px;
+  align-items: center;
+  font-family: "cormorant SC";
+  font-weight: 800;
+}
+
+.mobileDiv {
+  display: none;
+}
+
+.mainNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mainNavList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  gap: 20px;
+  list-style-type: none;
+  color: var(--primary-btn-two);
+  font-size: 18px;
+  font-family: "inter";
+}
+
+.mainItem a {
+  text-decoration: none;
+  color: var(--primary-btn-two);
+  font-weight: 500;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  font-size: var(--primary-btn-font-size);
+}
+
+.navBtn div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 16px;
+  border: 1px solid var(--nav-btn-color);
+  border-radius: 5px;
+  color: var(--nav-btn-color);
+  font-family: "inter";
+  text-align: center;
+  width: 150px;
+  font-size: 16px;
+}
+
+.login {
+  width: 80px;
+}
+
+.hire:hover,
+.login:hover {
+  background-color: #f6f6f6;
+}
+
+.hire:active,
+.login:active {
+  background-color: #e7e7e7;
+}
+
+.signUp {
+  border: none;
+  background-color: var(--nav-btn-bg);
+  color: #efefef;
+}
+
+.signUp:hover {
+  background-color: #5d5d5d;
+}
+
+.signUp:active {
+  background-color: #4f4f4f;
+}
+
+.btn-mobile-nav {
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: none;
+}
+
+.icon-mobile-nav {
+  width: 4.8rem;
+  height: 4.8rem;
+  color: #000000;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* HERO SECTION */
+
+.heroSection {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainHero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+}
+
+.heroBox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 84px;
+}
+
+.heroFels {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.heroFelsOne {
+  font-family: "Poppins";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.heroFelsOne span {
+  background: linear-gradient(
+    92deg,
+    rgba(220, 212, 255, 0.7) 37.65%,
+    rgba(166, 133, 255, 0.6) 47.26%,
+    rgba(215, 143, 188, 0.9) 91.43%,
+    rgba(231, 186, 215, 0.7) 105.54%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.heroFelsTwo {
+  color: #888888;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.heroText h1 {
+  color: #3d3d3d;
+  text-align: center;
+  font-family: "Cormorant Sc";
+  font-size: 80px;
+  font-style: normal;
+}
+
+.heroText p {
+  color: #888888;
+  text-align: center;
+  font-family: "cormorant garamond";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+#checkboxInput {
+  display: none;
+}
+
+.toggleSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background-color: rgba(199, 199, 199);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.toggleSwitch::after {
+  content: "";
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  left: 0px;
+  right: 0px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  box-shadow: 5px 2px 7px rgba(8, 8, 8, 0.308);
+}
+
+/* Switch the background color */
+
+#checkboxInput:checked + .toggleSwitch {
+  background-color: #000;
+  transition: 0.3s;
+}
+
+/* Move the toggle */
+
+#checkboxInput:checked + .toggleSwitch::after {
+  transform: translateX(100%);
+  transition-duration: 0.3s;
+}
+
+.heroInp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  gap: 30px;
+}
+
+/* Background that serves as the shadow  */
+
+.inputCon {
+  padding: 5px;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(250, 255, 7, 0.2),
+    rgba(200, 100, 162, 0.2),
+    rgba(250, 130, 111, 0.2),
+    rgba(220, 212, 255, 0.2),
+    rgba(166, 133, 255, 0.2),
+    rgba(166, 133, 255, 0.2)
+  );
+  border-radius: 50px;
+  content: "";
+}
+
+/* Background that serves as the border */
+
+.inputCon > div {
+  background-image: linear-gradient(
+    to right,
+    rgba(232, 93, 4, 0.6),
+    rgba(143, 55, 105, 0.6),
+    rgba(154, 39, 22, 0.6),
+    rgba(155, 139, 232, 0.6),
+    rgba(82, 13, 147, 0.6),
+    rgba(60, 9, 108, 0.6)
+  );
+  border-radius: 50px;
+  padding: 1px;
+  width: 100%;
+}
+
+.searchInp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  background-color: var(--main-bg-white);
+  padding: 5px;
+  color: #b0b0b0;
+}
+
+.searchInp > form {
+  flex-basis: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchInp input,
+button {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  padding: 5px 20px;
+  font-size: 18px;
+  color: #757573;
+}
+
+.searchInp input {
+  width: 100%;
+  font-size: small;
+}
+
+.searchInp input::placeholder {
+  color: #b0b0b0;
+}
+
+.searchInp .submit {
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.searchInp .getBtn {
+  width: 195px;
+  padding: 10px;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: #9462ff;
+  cursor: pointer;
+  color: #efefef;
+}
+
+.heroBt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 90px;
+  flex-wrap: wrap;
+}
+
+.heroBt > button {
+  font-size: small;
+  border: #b0b0b0 1px solid;
+  border-radius: 50px;
+  color: #b0b0b0;
+  cursor: pointer;
+}
+
+.heroBt > #pop {
+  border: none;
+}
+
+.experts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 120px;
+}
+
+.experts > p {
+  text-align: center;
+  text-transform: uppercase;
+  color: #3d3d3d;
+  font-family: "montserrat";
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.figmaCon {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  gap: 20px;
+}
+
+.figma {
+  border: #b0b0b0 2px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 30px;
+  border-radius: var(--border-radius-figma);
+  text-transform: uppercase;
+}
+
+.figma img {
+  height: 40px;
+  width: 30px;
+}
+
+.figma p {
+  font-family: "maven pro";
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.figma span {
+  font-weight: 800;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  gap: 180px;
+  flex-direction: column;
+}
+
+.cardSection > h2 {
+  font-size: 50px;
+  font-family: "inter";
+  font-weight: 500;
+  color: #3d3d3d;
+}
+
+.cardSection > h2 > span {
+  font-family: "cormorant sc";
+}
+
+.cardSection > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 8rem;
+}
+
+.cardSection > div > div {
+  width: 250px;
+  height: 325px;
+  background-color: #fff;
+  padding-top: 40px;
+  padding-left: 16px;
+  /* border: 2px solid black; */
+  font-family: "cormorant sc";
+  font-size: 30px;
+  font-weight: 700;
+  transition: background-size 0.5s ease-in;
+  border-radius: 10px;
+}
+
+.cardSection > div > .brand {
+  background-color: #45192f;
+  color: #efefef;
+  background-image: url(/images/book.png);
+  background-size: 100%;
+  background-position: -30px bottom;
+  background-repeat: no-repeat;
+}
+
+.cardSection > div > .brand:hover {
+  background-size: 110%;
+}
+
+.cardSection > div > .web {
+  background: #fa826f url(/images/keyboard.png) no-repeat;
+  background-position: -0px bottom;
+  background-size: 60%;
+  color: #3d3d3d;
+}
+
+.cardSection > div > .web:hover {
+  background-size: 70%;
+}
+
+.cardSection > div > .video {
+  background: #7c30f7 url(/images/microphone.png) no-repeat;
+  background-size: 90%;
+  color: #efefef;
+}
+
+.cardSection > div > .video:hover {
+  background-size: 100%;
+}
+
+.cardSection > div > .social {
+  background: #f1ff43 url(/images/ticktock.png) no-repeat;
+  background-size: 70%;
+  color: #000000;
+  background-position: 60px bottom;
+}
+
+.cardSection > div > .social:hover {
+  background-size: 90%;
+}
+
+.cardSection > div > .digital {
+  background: seagreen url(images/structure.png) no-repeat;
+  background-size: 60%;
+  background-position: 0 bottom;
+  color: #000000;
+}
+
+.cardSection > div > .digital:hover {
+  background-size: 50%;
+}
+
+.talentWrapper {
+  background: linear-gradient(
+        116deg,
+        rgba(0, 0, 0, 0.2) 29.24%,
+        rgba(0, 0, 0, 0)
+      )
+      55.02%,
+    url(images/fineGirls.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 6rem 0;
+  padding: 3rem 4.5rem;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 50px;
+  gap: 200px;
+}
+
+/* .talentTopWrapper{
+    background-color: blue;
+    display: flex;
+    justify-content: flex-start;
+
+} */
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.textContent > p {
+  color: #efefef;
+  font-size: 80px;
+  font-weight: 700;
+  font-family: "maven pro";
+}
+
+.textContent > p span {
+  font-family: "cormorant garamond";
+  font-weight: lighter;
+}
+
+.textContent > div {
+  display: flex;
+  align-items: center;
+  background-color: #9462ff;
+  border-radius: 50px;
+}
+
+.textContent > div button {
+  cursor: pointer;
+  color: #efefef;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.textContent > div:hover {
+  background-color: #804bf2;
+  transition-duration: 600ms;
+}
+
+.talentLowWrapper {
+  display: inline-flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 3rem;
+}
+
+.cardWrapper {
+  background-color: #efefef;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carding {
+  display: flex;
+  padding: 20px 10px;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.carding > div .paragraph {
+  color: #3d3d3d;
+  font-size: 30px;
+  font-family: "mavin pro";
+}
+
+.carding > div p span {
+  font-family: "cormorant garamond";
+  font-weight: 300;
+  display: block;
+}
+
+.carding > p {
+  font-size: 16px;
+  color: #3d3d3d;
+  font-weight: 400;
+  font-family: "mavin pro";
+}
+
+.textOnly {
+  text-align: center;
+  margin: 3rem 0;
+  font-size: 54px;
+  font-weight: 700;
+  font-family: "poppins";
+  padding: 0 8rem;
+  color: #3d3d3d;
+  line-height: 1;
+  letter-spacing: 1;
+}
+
+.textOnly p span {
+  font-family: "cormorant garamond";
+  font-weight: 500;
+}
+
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  margin: 3rem;
+  flex-wrap: wrap;
+  padding: 0 10rem;
+}
+
+.btnWrapper button {
+  border: 1px solid #3d3d3d;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: #3d3d3d;
+  font-family: "montserrat";
+  padding-inline: 24px;
+}
+
+.txt button {
+  background-color: transparent;
+}
+
+.txt button:hover {
+  background-color: #d1eeee;
+  transition-duration: 600ms;
+}
+
+.cardRow {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 64px;
+  padding: 2em 6em;
+  margin-bottom: 6rem;
+}
+
+.cardOne {
+  padding: 40px 30px;
+  flex: 0.35;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #efefef;
+  border-radius: 25px;
+}
+
+.cardOne > div {
+  width: 100%;
+}
+
+.cardOne h4 {
+  width: 100%;
+  font-weight: 700;
+  font-family: "poppins";
+  font-size: 30px;
+  color: #3d3d3d;
+  text-wrap: wrap;
+}
+
+.cardOne > h4 > span {
+  font-family: "cormorant garamond";
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.cardOne > div > p {
+  width: 100%;
+  font-size: 15px;
+  font-family: "maven pro";
+}
+
+.cardOne > .btnBox > button {
+  padding: 10px 15px;
+  background-color: #9462ff;
+  color: #efefef;
+  border-radius: 50px;
+  font-family: "inter";
+  font-size: 15px;
+}
+
+.cardOne > .btnBox > button:hover {
+  background-color: #9462ffc2;
+}
+
+.cardTwo {
+  background-color: #2f41ff;
+  border-radius: 30px;
+  flex: 0.4;
+  /* padding: 0 0 30px 30px; */
+}
+
+.cardTwo > .titleCon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  color: #efefef;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+  font-family: "poppins";
+}
+
+h6 {
+  text-align: center;
+  margin-top: 144px;
+}
+
+.cardTwo > .titleCon > .direction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #efefef;
+  display: none;
+  gap: 1rem;
+}
+
+.cardTwo > .titleCon .direction > p {
+  text-align: center;
+  color: #efefef;
+  margin: 0;
+  font-family: "poppins";
+}
+
+.cardTwo > .image-wrapper-one {
+  display: flex;
+  margin-top: 115px;
+  width: 100%;
+}
+
+.cardTwo > .image-wrapper-one > img:nth-child(2),
+.cardTwo > .image-wrapper-one > img:nth-child(3) {
+  margin-left: -20px;
+}
+
+.action {
+  background-color: var(--background-two);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 208px;
+}
+
+.wrapper {
+  margin-top: 109px;
+}
+
+.wrapper span {
+  color: var(--font-color);
+  font-size: 30px;
+  font-family: "poppins";
+  font-weight: 600;
+}
+
+.wrapper .spanTwo {
+  font-size: 24px;
+  font-family: "cormorant garamond";
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+  padding: 0px 2.5rem 199px 2.5rem;
+  margin-top: -150px;
+}
+
+.card {
+  flex-direction: column;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.inner_card {
+  padding: 31px;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  justify-content: center;
+  display: inline-flex;
+  text-align: center;
+}
+
+.inner_card div p:nth-child(1) {
+  font-size: 26px;
+  font-family: "poppins";
+  font-weight: 600;
+}
+
+.inner_card div p:nth-child(2) {
+  font-size: 24px;
+  font-family: "cormorant garamond";
+  font-weight: 500;
+}
+
+.one {
+  background-color: #7c30f7;
+  color: #efefef;
+}
+
+.two {
+  background-color: #000;
+  color: #efefef;
+}
+
+.three {
+  background-color: #ece8ff;
+  /* color: #efefef; */
+}
+
+.lower-wrapper {
+  background: white;
+  border-radius: 0px 0px 20px 20px;
+  padding: 3em;
+}
+
+.lower-wrapper > div {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.lower-wrapper .image_wrapper {
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: inline-flex;
+  padding-bottom: 1.2rem;
+}
+
+.lower-wrapper .image_wrapper img {
+  width: 75px;
+  height: 75px;
+  border: 1px solid black;
+  border-radius: 9999px;
+}
+
+.lower-wrapper .image_wrapper img:nth-child(2) {
+  margin-left: -12px;
+}
+
+.lower-wrapper .title p:nth-child(1) {
+  color: var(--font-color);
+  font-size: 18px;
+  font-family: "poppins";
+  font-weight: 600;
+}
+
+.lower-wrapper .title p:nth-child(2) {
+  color: var(--font-color);
+  font-size: 18px;
+  font-family: "cormorant garamond";
+  font-weight: 600;
+}
+
+.lower-wrapper .content {
+  color: var(--font-color);
+  font-size: 16px;
+  font-family: "maven pro";
+  font-weight: 400;
+}
+
+.mt-minus {
+  margin-top: -6em;
+}
+
+.btn-last{
+  display: none;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: "inter";
+  margin-top: -20rem;
+  margin-bottom: 45px;
+  border: 2px solid #383838;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  justify-content: center;
+  height: 90vh;
+  background: #ffffff url(images/circle.png) no-repeat;
+  background-position: bottom right;
+  background-size: 30%;
+}
+
+footer > .footerWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 84px 63px;
+  gap: 40px;
+}
+
+footer > .footerWrapper > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  flex-direction: column;
+  gap: 32px;
+}
+
+footer > .footerWrapper > div > h6 {
+  text-align: left;
+  margin: 0;
+  font-family: "montserrat";
+  font-weight: 500;
+  font-size: 18px;
+  color: #cdcdcd;
+}
+
+footer > .footerWrapper > div ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+footer > .footerWrapper > div ul > li > a {
+  color: #3d3d3d;
+  font-family: "Maven pro";
+  font-weight: 600;
+  font-size: 20px;
+}
+
+ 
